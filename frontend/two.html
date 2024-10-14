@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #E2E4EB;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(8, 1fr);
+            grid-template-rows: auto;
+        }
+        .box {
+            background-color: white;
+            color: black;
+            padding: 10px;
+            border-radius: 8px;
+        }
+        .box1, .box2 {
+            grid-column: 1 / -1; /* Span all columns */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .box3 {
+            grid-column: 1 / -1; /* Span all columns */
+            width: 99vw; /* Full width */
+            position: relative; /* Allow absolute positioning for child elements */
+            left: 0; /* Align to left */
+            margin-left: calc(50% - 50vw); /* Center align */
+        }
+        .box4 {
+            grid-column: 1 / 3; /* Span first two columns */
+            text-align: start;
+            margin-top: 20px; /* Space after navbar */
+            margin-left: 10px;
+        }
+        .box5 {
+            grid-column: 3 / 7; /* Span columns 3 to 6 */
+            margin-top: 20px;
+            margin-left: 10px;
+            padding: 0;
+            height: 300px;
+        }
+    
+        .box6 {
+    grid-column: 7 / 9; /* Place in same column */
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    display: grid; /* Use grid layout */
+    grid-template-rows: 1fr 1fr; /* Two equal rows */
+    gap: 10px; /* Add space between images */
+    height: 32vw; /* Adjust height for two images */
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #E2E4EB;
+}
+.box7 {
+    grid-column: 3 / 7; /* Place in same column */
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 0px;
+    display:flex; /* Use grid layout */
+    grid-template-rows: 1fr 1fr; /* Two equal rows */
+    gap: 10px; /* Add space between images */
+    height: 32vw; /* Adjust height for two images */
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #E2E4EB;
+}
+.box6 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px; /* Keep border-radius for each image */
+}
+.box7 img {
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+    border-radius: 8px; /* Keep border-radius for each image */
+}
+
+
+
+   
+        /* Carousel Styles */
+        .carousel {
+            position: relative;
+            display: flex;
+            overflow: hidden;
+            width: 100%;
+            height: 300px;
+        }
+        .carousel img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+        .carousel .carousel-buttons {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+        .carousel button {
+            background-color: rgba(0, 0, 0, 0.5);
+            border: none;
+            color: white;
+            padding: 15px;
+            cursor: pointer;
+            border-radius: 50%; /* Make buttons circular */
+            font-size: 18px; /* Increase size of arrows */
+            height: 45px; /* Set height */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .buy-now {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            background-color: #F1352B;
+            color: white;
+            padding: 8px 12px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: repeat(4, 1fr);
+            }
+            .box1, .box2, .box3 {
+                grid-column: 1 / -1; /* Span all columns */
+            }
+            .box4,.box6,.box5 {
+                grid-column: 1 / -1; /* Span all columns */
+            }
+        }
+        @media (max-width: 480px) {
+            .container {
+                grid-template-columns: 1fr; /* Single column layout */
+            }
+        }
+        /* Button styles */
+        button, input[type="button"] {
+            padding: 8px 12px;
+            background-color: #F1352B;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type="text"] {
+            width: 100%; /* Full width */
+            padding: 8px;
+            border-radius: 4px;
+            border: 1px solid #070404;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .navbar-buttons {
+            display: flex;
+            gap: 10px; /* Space between buttons */
+            justify-content: center;
+            flex-grow: 1; /* Allow buttons to take up space */
+        }
+        .logo {
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box box1">
+            <div style="display: flex; align-items: center;">
+                <p style="background-color: aliceblue; margin: 0;">19504 الخط الساخن</p>
+                <p style="margin-left: 10px;">01025381934</p>
+            </div>
+            <div style="display: flex; gap: 10px;">
+                <input style="background-color: white;color: black;" type="button" value="العروض الجديدة" />
+                <input style="background-color: white;color: black; " type="button" value="تتبع الاوردرات" />
+                <select style="background-color: white;border: 0px; ">
+                    <option>جنيه مصري</option>
+                    <option>دولار امريكي</option>
+                </select>
+                <select style="background-color: white;border: 0px;">
+                    <option>عربي</option>
+                    <option>انجليزي</option>
+                </select>
+            </div>
+        </div>
+        <div class="box box2">
+            <div>
+                <img src="imghome/Link(2).png" style="width: 40px; height: 40px;" alt="Icon 1" />
+                <img src="imghome/Link(3).png" style="width: 40px; height: 40px;" alt="Icon 2" />
+                <img src="imghome/Link(5).png" style="width: 40px; height: 40px;" alt="Icon 3" />
+            </div>
+         
+            <div style="text-align: center; display: flex; justify-content: center; gap: 10px;">
+                <select style="background-color: white;border: 0px;" >
+                    <option >من نحن</option>
+                </select>
+                <select style="background-color: white;border: 0px;" >
+                    <option>منتجاتنا</option>
+                </select>
+                <input style="background-color: white;color: #070404;" type="button" value="تواصل معنا" />
+                <input style="background-color: white;color: #070404;" type="button" value="الرئيسية" />
+            </div>   
+            <div class="logo">
+                <img src="imghome/logo1.png" style="width: 150px; height: 50px;" alt="Logo" />
+            </div>
+        </div>
+        <div class="box box3">
+            <nav class="navbar" style="background-color: #F1352B; padding: 10px;border-radius: 8px;
+            ">
+                <div style="display: flex; align-items: center;">
+                    <button>Search</button>
+                    <input style="border: 0px;border-radius:4px 25px  4px 25px ;width: 40vw;" type="text" placeholder="Search..." />
+                </div>
+                <div class="navbar-buttons">
+                    <button>Free shipping over $199</button>
+                    <button>30 days money back</button>
+                    <button>100% secure payment</button>
+                </div>
+            </nav>
+        </div>
+        <div class="box box4">
+            <p style="color: #F1352B; font-size: large;">SALE 40% OFF</p>
+            <p>Laptops</p>
+            <p>PC & Computers</p>
+            <p>Cell Phones</p>
+            <p>Tablets</p>
+            <p>Gaming & VR</p>
+            <p>Networking</p>
+            <p>Cameras</p>
+            <p>Sounds</p>
+            <p>Office</p>
+            <p>Storage, USB</p>
+            <p>Accessories</p>
+            <p>Clearance</p>
+        </div>
+
+        <!-- Carousel Box -->
+        <div class="box box5" >
+            <div class="carousel">
+                <img style="border-radius: 8px;" src="imghome/3.png" alt="Slide 1">
+                <img src="imghome/slide2.jpg" alt="Slide 2" style="display:none;">
+                <img src="imghome/slide3.jpg" alt="Slide 3" style="display:none;">
+                <button class="buy-now">Buy Now</button>
+                <div class="carousel-buttons">
+                    <button onclick="prevSlide()">&#10094;</button>
+                    <button onclick="nextSlide()">&#10095;</button>
+                </div>
+                
+            </div>
+            <div class="box box7">
+                <img src="imghome/4.png" alt="">
+                <img src="imghome/5.png" alt="">
+            </div>    
+        </div>
+        <div class="box box6">
+            <img src="imghome/6.png" alt="Image 1">
+            <img src="imghome/7.png" alt="Image 2">
+        </div>    
+       
+    </div>
+    
+
+
+
+
+
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.carousel img');
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.style.display = i === index ? 'block' : 'none';
+            });
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        showSlide(currentSlide);
+    </script>
+</body>
+</html>

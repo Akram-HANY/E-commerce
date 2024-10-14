@@ -1,0 +1,217 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    
+  }
+  
+  body {
+    background-color: #f8f9fa;
+    font-family: Arial, sans-serif;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+  }
+  
+  .login-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .login-box {
+    width: 350px;
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+  }
+  h2 {
+    text-align: center;
+    color: #333;
+  }
+  
+  p {
+    text-align: center;
+    color: #777;
+  }
+  
+  form {
+    margin-top: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+  }
+  
+  input[type="email"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .signin-btn {
+    width: 106%;
+    padding: 12px;
+    background-color: #ff4d4f;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .google-signin {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .google-btn {
+    width: 106%;
+    padding: 12px;
+    background-color: white;
+    color: red;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .signup {
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .promo-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 20px;
+  }
+  
+  .promo-img {
+    width: 300px;
+    margin-bottom: 20px;
+  }
+  
+  footer {
+    background-color: #f8f8f8;
+    padding: 20px;
+    text-align: right;
+    color: #333;
+}
+
+.footer-content {
+    display: flex;
+}
+
+.footer-column {
+    flex-basis: 18%;
+}
+.footer-column2 {
+    flex-basis: 30%;
+}
+
+.footer-column h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+    color: #333;
+    text-decoration: none;
+}
+
+.footer-column ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    margin-right: auto;
+    margin-left: auto;
+display: grid;
+    align-items: center;
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+    width: 1400px;
+}
+
+.currency-switcher, .language-switcher {
+    display: inline-block;
+
+}
+
+.currency-switcher button, .language-switcher button {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 14px;
+width: 300;}
+
+.social-icons a {
+    margin-left: auto;
+    width: 30;
+    height: 10;
+}
+
+.payment-methods {
+    display: flex;
+    justify-content: center; /* Centers the images horizontally */
+    margin-top: 10px; 
+    margin-right: 50%;
+    margin-left: 50%;
+    
+}
+
+.payment-methods img {
+    width: 40px; /* Maintain the size */
+    height: 30px; /* Maintain the size */
+    margin: auto; /* Add horizontal spacing between images */
+}
+.input-container {
+    align-items: right ;
+}
+
+input[type="text"] {
+    width: 400px; /* يجعل الحقل يملأ المساحة المتاحة */
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+
+    
+}
+
+.subscribe-btn {
+    padding: 10px 15px;
+    background-color: white;
+    color: orangered;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 5px; /* فراغ بسيط بين الحقل والز 버튼 */
+}

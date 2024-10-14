@@ -6,7 +6,7 @@ document.querySelector('form').addEventListener('submit', function (event) {
     const password = document.getElementById('password').value;
   
     if (!email || !password) {
-      alert('Please fill out all fields 2');
+      alert('Please fill out all fields');
     } else {
       alert(`Email: ${email}, Password: ${password}`);
       // Add actual form submission logic here
